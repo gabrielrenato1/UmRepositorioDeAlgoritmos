@@ -1,18 +1,18 @@
-typedef struct item {
-    struct item* nextItem;
-} Item;
+typedef struct stackItem {
+    struct stackItem* nextItem;
+} StackItem;
 
 typedef struct stack {
-    Item* top;
+    StackItem* top;
 } Stack;
 
-int isEmpty(Stack *stack){
+int isEmptyStack(Stack *stack){
     return stack->top == NULL;
 }
 
-void top(Stack *stack){
+void topStack(Stack *stack){
     
-    if(isEmpty(stack)){
+    if(isEmptyStack(stack)){
         
         printf("Pilha vazia\n\n");
         
@@ -28,39 +28,39 @@ void top(Stack *stack){
 
 void push(Stack* stack){
     
-    Item *item = (Item*)(malloc(sizeof(Item)));
+    StackItem *item = (StackItem*)(malloc(sizeof(StackItem)));
     
-    item->nextItem = isEmpty(stack) ? NULL : stack->top;
+    item->nextItem = isEmptyStack(stack) ? NULL : stack->top;
     stack->top = item;
     
-    top(stack);
+    topStack(stack);
     
 }
 
 void pop(Stack* stack){
     
-    if(isEmpty(stack)){
+    if(isEmptyStack(stack)){
         
         printf("Pilha vazia\n\n");
         
     }else{
 
-        Item *itemTop = stack->top;
+        StackItem *itemTop = stack->top;
         stack->top = stack->top->nextItem;
         free(itemTop);
 
     }
     
-    top(stack);
+    topStack(stack);
     
 }
 
 void list(Stack* stack){
 
-    Item *item = stack->top;
+    StackItem *item = stack->top;
     int stop = 0;
     
-    if(isEmpty(stack)){
+    if(isEmptyStack(stack)){
         
         printf("Pilha vazia\n\n");
         

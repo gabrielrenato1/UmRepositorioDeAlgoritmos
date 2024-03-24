@@ -5,6 +5,7 @@
 #include "algorithms/powerNumber.c"
 #include "algorithms/switchValues.c"
 #include "algorithms/stack.c"
+#include "algorithms/queue.c"
 
 void menu(){
 
@@ -13,7 +14,7 @@ void menu(){
     printf("Escolha uma opcao:\n");
     printf("0 - Finalizar\n1 - Exponenciacao\n");
     printf("2 - Casa Fibonacci\n3 - Trocar valores com ponteiro\n");
-    printf("4 - Pilha\n");
+    printf("4 - Pilha\n5 - Fila\n");
     printf("...\n");
     printf(">");
        
@@ -41,6 +42,8 @@ int main(){
                 switchValuesOperation();
             case 4:
                 stackOperation();
+            case 5:
+                queueOperation();
                 break;
             default:
                 printf("Operacao nao encontrada");
