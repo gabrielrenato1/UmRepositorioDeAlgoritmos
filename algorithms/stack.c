@@ -2,7 +2,7 @@ typedef struct item {
     struct item* nextItem;
 } Item;
 
-typedef struct p {
+typedef struct stack {
     Item* top;
 } Stack;
 
