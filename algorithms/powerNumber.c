@@ -15,6 +15,8 @@ void powerNumberOperation(){
     int x = 0;
     float number = 0;
 
+   printf("\n\n>>>>>Potencia de um número<<<<<\n\n");
+
     printf("Digite o valor da base: ");
     scanf("%f", &number);
     

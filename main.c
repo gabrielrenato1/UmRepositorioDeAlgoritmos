@@ -1,16 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "algorithms/fibonacci.c"
 #include "algorithms/powerNumber.c"
 #include "algorithms/switchValues.c"
+#include "algorithms/stack.c"
 
 void menu(){
+
+    printf("\n\n>>>>>Hub principal<<<<<\n\n");
 
     printf("Escolha uma opcao:\n");
     printf("0 - Finalizar\n1 - Exponenciacao\n");
     printf("2 - Casa Fibonacci\n3 - Trocar valores com ponteiro\n");
-    printf("...\n\n");
-    printf("Operacao: ");
+    printf("4 - Pilha\n");
+    printf("...\n");
+    printf(">");
        
 }
 
@@ -34,6 +39,8 @@ int main(){
                 fibonacciOperation();
             case 3:
                 switchValuesOperation();
+            case 4:
+                stackOperation();
                 break;
             default:
                 printf("Operacao nao encontrada");
