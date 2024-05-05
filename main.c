@@ -6,6 +6,7 @@
 #include "algorithms/switchValues.c"
 #include "algorithms/stack.c"
 #include "algorithms/queue.c"
+#include "algorithms/list.c"
 
 void menu(){
 
