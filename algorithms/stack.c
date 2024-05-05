@@ -58,7 +58,6 @@ void pop(Stack* stack){
 void list(Stack* stack){
 
     StackItem *item = stack->top;
-    int stop = 0;
     
     if(isEmptyStack(stack)){
         
@@ -66,16 +65,12 @@ void list(Stack* stack){
         
     }else{
         
-        while(stop == 0){
+        while(item != NULL){
             
             printf("Endereco (Hexadecimal): %p\n", item);
             printf("Endereco proximo Item (Hexadecimal): %p\n\n", item->nextItem);
             
-            if(item->nextItem != NULL){
-                item = item->nextItem;
-            }else{
-                stop = 1;
-            }
+            item = item->nextItem;
         
         }
         
