@@ -7,6 +7,7 @@
 #include "algorithms/stack.c"
 #include "algorithms/queue.c"
 #include "algorithms/list.c"
+#include "algorithms/binaryTree.c"
 
 void menu(){
 
@@ -16,6 +17,7 @@ void menu(){
     printf("0 - Finalizar\n1 - Exponenciacao\n");
     printf("2 - Casa Fibonacci\n3 - Trocar valores com ponteiro\n");
     printf("4 - Pilha\n5 - Fila\n");
+    printf("6 - Arvore Binaria\n7 - \n");
     printf("...\n");
     printf(">");
        
@@ -45,6 +47,9 @@ int main(){
                 stackOperation();
             case 5:
                 queueOperation();
+                break;
+            case 6:
+                binaryTreeOperation();
                 break;
             default:
                 printf("Operacao nao encontrada");
